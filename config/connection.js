@@ -1,14 +1,10 @@
 var mysql = require("mysql");
 
-if (process.env.NODE_ENV === "production") {
 
-  var connection = mysql.createConnection({
-    port: 3306,
-    host: "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "rkgaotlfg0psubnf",
-    password: "d9cvu3c8qfkhsfoy",
-    database: "d8th2nv7a348jquk.burgers"
-  });
+
+  if(process.env.JAWSDB_URL) {
+    //Heroku deployment
+      connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   var connection = mysql.createConnection({
     port: 3306,
@@ -18,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
     database: "burger_db"
   });
 
-}
+};
 
 
 
