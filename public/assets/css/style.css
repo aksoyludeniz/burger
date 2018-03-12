@@ -1,3 +1,7 @@
 body {
   background: orange;
 }
+
+.undevoured_burgers {
+  float: right;
+}

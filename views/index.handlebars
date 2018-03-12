@@ -1,27 +1,36 @@
-
-
-<h2>burgers devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>burgers that are not devoured!</h2>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-    {{/if}}
-  {{/each}}
-</ul>
-
 <div align="center">
 <img src="assets/img/burger.png" width="200px" height="150px">
 </div>
 
-<h2>Add a burger</h2>
+<ul class = "undevoured_burgers">
+  {{#each burgers}}
+    <ol>
+      {{#if devoured}}
+      {{burger_name}}
+     {{/if}}
+   </ol>
+{{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+   <ol>
+     {{#unless devoured}}
+      {{burger_name}}
+      <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+        devour
+
+</button>
+</li>
+
+     {{/unless}}
+  </ol>
+  {{/each}}
+</ul>
+
+
+
+
 <form class="create-form">
 
 <div align="center">
@@ -31,9 +40,7 @@
   </div>
 </div>
 
-  <div class="form-group">
-    <input type="radio" name="devoured" value="1" checked> devoured <br>
-  </div>
+
 
   <button type="submit">Add burger</button>
 </form>
