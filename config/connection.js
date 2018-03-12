@@ -4,10 +4,10 @@ if (process.env.NODE_ENV === "production") {
 
   var connection = mysql.createConnection({
     port: 3306,
-    host: "edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "o336wzdttql8mahy",
-    password: "h10ws08po54s2gz3",
-    database: "burger_db"
+    host: "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "rkgaotlfg0psubnf",
+    password: "d9cvu3c8qfkhsfoy",
+    database: "d8th2nv7a348jquk"
   });
 } else {
   var connection = mysql.createConnection({
