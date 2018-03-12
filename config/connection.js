@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === "production") {
     host: "edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "o336wzdttql8mahy",
     password: "h10ws08po54s2gz3",
+    database: "burger_db"
   });
 } else {
   var connection = mysql.createConnection({
